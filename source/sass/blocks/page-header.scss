@@ -1,0 +1,41 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 318px;
+}
+
+@media (max-width: $desktop-width) {
+  .page-header__logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header__logo {
+    position: static;
+    margin-left: 21px;
+  }
+
+  .page-header__logo--closed {
+    display: block;
+  }
+
+  .page-header__logo--opened {
+    display: none;
+  }
+
+  .page-header__wrapper {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+  }
+}

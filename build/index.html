@@ -10,16 +10,115 @@
 </head>
 
 <body>
-  <h1>Добро</h1>
-  <header>
-
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo-wrapper">
+        <a class="page-header__logo page-header__logo--closed">
+          <img src="img/logo.svg" width="67" height="20" alt="Логотип магазина 'Велосипеды'">
+        </a>
+        <button class="toggle toggle--closed" type="button">Открыть меню</button>
+      </div>
+      <nav class="main-nav main-nav--closed">
+        <ul class="main-nav__list header-list">
+          <li class="header-list__item">
+            <a class="header-list__link" href="#">О нас</a>
+          </li>
+          <li class="header-list__item">
+            <a class="header-list__link" href="#">Виды велосипедов</a>
+          </li>
+          <li class="header-list__item">
+            <a class="header-list__link" href="#">Видео про велосипеды</a>
+          </li>
+          <li class="header-list__item">
+            <a class="header-list__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-
+  <main class="page-main">
+    <div class="page-main__wrapper">
+      <div class="container">
+        <h1 class="page-main__heading">Мы продаем велосипеды</h1>
+        <p class="page-main__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+    </div>
+    <section class="selection">
+      <h2 class="visually-hidden">Подбор велосипеда</h2>
+      <p class="selection__heading">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+      <form class="form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="form__fieldset">
+          <ul class="form__list">
+            <li class="form__item">
+              <span class="fieldtext">
+                <label class="visually-hidden" for="name">Имя</label>
+                <input class="fieldtext__input" type="text" name="first-name" placeholder="Введите Ваше Имя" id="name" required="">
+              </span>
+            </li>
+            <li class="form__item">
+              <span class="fieldtext">
+                <label class="visually-hidden" for="phone">Телефон</label>
+                <input class="fieldtext__input" type="number" name="phone" placeholder="Введите Ваш номер телефона" id="phone" required="">
+              </span>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="selection__button" type="submit">Оставить заявку</button>
+      </form>
+    </section>
+    <section class="advantages">
+      <h2 class="advantages__heading">Несколько фактов о нас</h2>
+      <div class="container">
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <div class="description">
+            <p class="description__heading">01</p>
+            <p class="description__text">Самый широкий выбор велосипедов!</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="description">
+            <p class="description__heading">02</p>
+            <p class="description__text">Доставка велосипедов по всей России!</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="description">
+            <p class="description__heading">03</p>
+            <p class="description__text">Большой выбор крутых аксессуаров!</p>
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="description">
+            <p class="description__heading">04</p>
+            <p class="description__text">Профессиональные консультации!</p>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </section>
   </main>
   <footer>
 
   </footer>
+  <script>
+    var toggle = document.querySelector('.toggle');
+    var logo = document.querySelector('.page-header__logo');
+
+    toggle.addEventListener('click', function () {
+      if (toggle.classList.contains('toggle--closed')) {
+        toggle.classList.remove('toggle--closed');
+        toggle.classList.add('toggle--opened');
+        logo.classList.remove('page-header__logo--closed');
+        logo.classList.add('page-header__logo--opened');
+      } else {
+        toggle.classList.add('toggle--closed');
+        toggle.classList.remove('toggle--opened');
+        logo.classList.add('page-header__logo--closed');
+        logo.classList.remove('page-header__logo--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>
