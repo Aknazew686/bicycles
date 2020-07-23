@@ -1,0 +1,27 @@
+.player__image {
+  width: 929px;
+  height: 522px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -386px;
+}
+
+.player {
+  position: relative;
+}
+
+@media (max-width: $desktop-width) {
+  .player__image {
+    width: 503px;
+    height: 282px;
+    margin-top: -297px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .player__image {
+    width: 288px;
+    height: 161px;
+    margin-top: -120px;
+  }
+}
