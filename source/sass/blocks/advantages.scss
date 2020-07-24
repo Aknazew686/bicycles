@@ -3,10 +3,10 @@
   padding: 0;
   margin-bottom: 50px;
   margin-top: 390px;
+  margin-left: 439px;
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
-  text-align: center;
   color: $color-light;
 }
 
@@ -14,18 +14,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin: 0 auto;
   display: flex;
-  width: 100%;
+  width: 1145px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .advantages {
-  padding-bottom: 131px;
+  padding-bottom: 151px;
 }
 
 .advantages__item {
-  width: 263px;
+  width: 242px;
 }
 
 @media (max-width: $desktop-width) {

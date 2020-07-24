@@ -5,7 +5,7 @@
   font-size: 17px;
   line-height: 28px;
   color: $color-main;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 327px;
   text-align: center;
 }
@@ -13,7 +13,7 @@
 .selection__button {
   margin: 0;
   padding: 0;
-  padding: 15px 101px;
+  padding: 16px 53px;
   border: none;
   font-family: $font-main;
   font-weight: 600;
@@ -25,8 +25,8 @@
 }
 
 .selection {
-  margin-top: -495px;
-  margin-left: 64%;
+  margin-top: -503px;
+  margin-left: calc(50% + 113px);
 }
 
 @media (max-width: $desktop-width) {

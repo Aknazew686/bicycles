@@ -7,11 +7,11 @@
 .kinds__heading {
   margin: 0;
   padding: 0;
-  padding-bottom: 60px;
+  padding-bottom: 49px;
+  margin-left: 462px;
   font-weight: 600;
   font-size: 30px;
   line-height: 30px;
-  text-align: center;
   color: $color-light;
 }
 
@@ -21,16 +21,25 @@
   margin: 0 auto;
   list-style: none;
   display: flex;
-  width: 1126px;
+  width: 1223px;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.kinds__item {
+  width: 379px;
+}
+
+.kinds__item:nth-child(2) {
+  padding-top: 40px;
 }
 
 .kinds__item:first-child {
   background-image: url(../img/circle-desktop.svg);
   background-repeat: no-repeat;
-  background-position: 0% 39%;
+  background-position: 0% 35%;
   padding-left: 60px;
+  padding-top: 11px;
 }
 
 @media (max-width: $desktop-width) {
