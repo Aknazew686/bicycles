@@ -1,7 +1,7 @@
 .video__heading {
   margin: 0;
   padding: 0;
-  margin-left: 539px;
+  text-align: center;
   padding-bottom: 20px;
   font-weight: 600;
   font-size: 30px;
@@ -44,11 +44,12 @@
 @media (max-width: $desktop-width) {
   .video {
     padding-top: 70px;
-    padding-bottom: 313px;
+    padding-bottom: 236px;
   }
 
   .video__heading {
     font-size: 24px;
+
   }
 
   .video__text {
@@ -65,7 +66,12 @@
 @media (max-width: $tablet-width) {
   .video {
     padding-top: 84px;
-    padding-bottom: 163px;
+    padding-bottom: 167px;
+  }
+
+  .video__heading {
+    margin-left: 13px;
+    text-align: left;
   }
 
   .video__text {

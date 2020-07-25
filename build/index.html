@@ -147,22 +147,27 @@
       </div>
     </section>
     <section class="video" id="video">
+      <div class="container">
       <h2 class="video__heading">Видео про велосипеды</h2>
       <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+      </div>
     </section>
     <section class="player">
       <h2 class="visually-hidden">Плеер видео</h2>
       <picture>
-        <source type="image/webp" media="(min-width: 1024px)" srcset="img/video-bg-desktop@2x.webp, img/video-bg-desktop@2x@2x.webp 2x">
+        <source type="image/webp" media="(min-width: 1024px)" srcset="img/video-bg-desktop.webp, img/video-bg-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)" srcset="img/video-bg-tablet@2x.webp, img/video-bg-tablet@2x.webp 2x">
         <source type="image/webp" srcset="img/video-bg-mobile.webp, img/video-bg-mobile@2x.webp 2x">
         <source media="(min-width: 1024px)" srcset="img/video-bg-desktop.png, img/video-bg-desktop@2x.png 2x">
         <source media="(min-width: 768px)" srcset="img/video-bg-tablet.png, img/video-bg-tablet@2x.png 2x">
         <img class="player__image" src="img/video-bg-mobile.png" srcset="img/video-bg-mobile@2x.png 2x" alt="Фотография велосипеда">
       </picture>
-      <a class="video__link" href="#"></a>
+      <a class="video__link" aria-label="навигация" href="#"></a>
     </section>
+  </main>
+  <footer>
     <section class="contacts" id="contacts">
+      <div class="container">
       <h2 class="contacts__heading">Как нас найти?</h2>
       <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       <iframe class="map" title="карта" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616006086!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1595512254894!5m2!1sru!2sru" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
@@ -171,66 +176,14 @@
           <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
         </li>
         <li class="contacts__item contacts__item--phone">
-          <a class="contacts__link" href="tel:+7(499)-784-684-46">+7 (499) -784-684-46</a>
+          <a class="contacts__link" href="tel:+7(499)-784-684-46">+7(499)-784-684-46</a>
         </li>
       </ul>
+      </div>
     </section>
-  </main>
-  <footer>
-
   </footer>
-  <script>
-    var toggle = document.querySelector('.toggle');
-    var logo = document.querySelector('.page-header__logo');
-    var nav = document.querySelector('.main-nav');
-    var header = document.querySelector('.page-header__wrapper');
-    var body = document.querySelector('body')
-    var links = document.querySelectorAll('.header-list__item')
-    var anchors = document.querySelectorAll('a[href*="#"]');
-
-    toggle.addEventListener('click', function () {
-      if (toggle.classList.contains('toggle--closed')) {
-        toggle.classList.remove('toggle--closed');
-        toggle.classList.add('toggle--opened');
-        logo.classList.remove('page-header__logo--closed');
-        logo.classList.add('page-header__logo--opened');
-        nav.classList.remove('main-nav--closed');
-        header.classList.add('page-header__wrapper--opened');
-        body.classList.add('hidden');
-      } else {
-        toggle.classList.add('toggle--closed');
-        toggle.classList.remove('toggle--opened');
-        logo.classList.add('page-header__logo--closed');
-        logo.classList.remove('page-header__logo--opened');
-        nav.classList.add('main-nav--closed');
-        header.classList.remove('page-header__wrapper--opened');
-        body.classList.remove('hidden');
-      }
-
-      for (let link of links) {
-        link.addEventListener('click', function (event) {
-          toggle.classList.add('toggle--closed');
-          toggle.classList.remove('toggle--opened');
-          logo.classList.add('page-header__logo--closed');
-          logo.classList.remove('page-header__logo--opened');
-          nav.classList.add('main-nav--closed');
-          header.classList.remove('page-header__wrapper--opened');
-          body.classList.remove('hidden');
-        })
-      }
-
-      for (let anchor of anchors) {
-        anchor.addEventListener('click', function (event) {
-          event.preventDefault();
-          var blockID = anchor.getAttribute('href')
-          document.querySelector('' + blockID).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          })
-        })
-      }
-    });
-  </script>
+  <script src="js/main.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 
 </html>

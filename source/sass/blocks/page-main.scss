@@ -50,12 +50,13 @@
   }
 
   .page-main__heading {
-    padding-top: 120px;
+    padding-top: 136px;
+    padding-bottom: 20px;
+    padding-left: 0;
     width: auto;
     font-size: 30px;
     line-height: 42px;
     text-align: center;
-    padding-bottom: 20px;
   }
 
   .page-main__text {
@@ -63,6 +64,7 @@
     margin: 0 auto;
     text-align: center;
     padding-bottom: 80px;
+    padding-left: 0;
   }
 }
 
@@ -80,6 +82,14 @@
   .page-main__text {
     width: auto;
     padding-bottom: 70px;
+  }
+
+  .page-main__heading {
+    padding-top: 122px;
+  }
+
+  .page-main__text {
+    width: 288px;
   }
 }
 

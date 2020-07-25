@@ -8,8 +8,20 @@
   width: auto;
 }
 
+@media (max-width: 1439px) {
+  .container {
+    width: auto;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .container {
-    width: 627px;
+    width: 686px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .container {
+    width: 320px;
   }
 }

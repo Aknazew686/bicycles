@@ -163,14 +163,16 @@
       </div>
     </section>
     <section class="video" id="video">
+      <div class="container">
       <h2 class="video__heading">Видео про велосипеды</h2>
       <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+      </div>
     </section>
     <section class="player">
       <h2 class="visually-hidden">Плеер видео</h2>
       <picture>
         <source type="image/webp" media="(min-width: 1024px)"
-          srcset="img/video-bg-desktop@2x.webp, img/video-bg-desktop@2x@2x.webp 2x">
+          srcset="img/video-bg-desktop.webp, img/video-bg-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="img/video-bg-tablet@2x.webp, img/video-bg-tablet@2x.webp 2x">
         <source type="image/webp" srcset="img/video-bg-mobile.webp, img/video-bg-mobile@2x.webp 2x">
@@ -179,9 +181,12 @@
         <img class="player__image" src="img/video-bg-mobile.png" srcset="img/video-bg-mobile@2x.png 2x"
           alt="Фотография велосипеда">
       </picture>
-      <a class="video__link" href="#"></a>
+      <a class="video__link" aria-label="навигация" href="#"></a>
     </section>
+  </main>
+  <footer>
     <section class="contacts" id="contacts">
+      <div class="container">
       <h2 class="contacts__heading">Как нас найти?</h2>
       <p class="contacts__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       <iframe class="map" title="карта"
@@ -192,66 +197,14 @@
           <a class="contacts__link" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
         </li>
         <li class="contacts__item contacts__item--phone">
-          <a class="contacts__link" href="tel:+7(499)-784-684-46">+7 (499) -784-684-46</a>
+          <a class="contacts__link" href="tel:+7(499)-784-684-46">+7(499)-784-684-46</a>
         </li>
       </ul>
+      </div>
     </section>
-  </main>
-  <footer>
-
   </footer>
-  <script>
-    var toggle = document.querySelector('.toggle');
-    var logo = document.querySelector('.page-header__logo');
-    var nav = document.querySelector('.main-nav');
-    var header = document.querySelector('.page-header__wrapper');
-    var body = document.querySelector('body')
-    var links = document.querySelectorAll('.header-list__item')
-    var anchors = document.querySelectorAll('a[href*="#"]');
-
-    toggle.addEventListener('click', function () {
-      if (toggle.classList.contains('toggle--closed')) {
-        toggle.classList.remove('toggle--closed');
-        toggle.classList.add('toggle--opened');
-        logo.classList.remove('page-header__logo--closed');
-        logo.classList.add('page-header__logo--opened');
-        nav.classList.remove('main-nav--closed');
-        header.classList.add('page-header__wrapper--opened');
-        body.classList.add('hidden');
-      } else {
-        toggle.classList.add('toggle--closed');
-        toggle.classList.remove('toggle--opened');
-        logo.classList.add('page-header__logo--closed');
-        logo.classList.remove('page-header__logo--opened');
-        nav.classList.add('main-nav--closed');
-        header.classList.remove('page-header__wrapper--opened');
-        body.classList.remove('hidden');
-      }
-
-      for (let link of links) {
-        link.addEventListener('click', function (event) {
-          toggle.classList.add('toggle--closed');
-          toggle.classList.remove('toggle--opened');
-          logo.classList.add('page-header__logo--closed');
-          logo.classList.remove('page-header__logo--opened');
-          nav.classList.add('main-nav--closed');
-          header.classList.remove('page-header__wrapper--opened');
-          body.classList.remove('hidden');
-        })
-      }
-
-      for (let anchor of anchors) {
-        anchor.addEventListener('click', function (event) {
-          event.preventDefault();
-          var blockID = anchor.getAttribute('href')
-          document.querySelector('' + blockID).scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-          })
-        })
-      }
-    });
-  </script>
+  <script src="js/main.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 
 </html>

@@ -67,12 +67,24 @@
     width: 68px;
     height: 68px;
     top: -20px;
-    right: -25px;
+    right: 13px;
+  }
+
+  .photo__heading {
+    margin-left: 31px;
+  }
+
+  .photo__heading--road {
+    margin-left: 18px;
   }
 }
 
 @media (max-width: $tablet-width) {
   .photo__heading {
     padding-bottom: 40px;
+  }
+
+  .photo--children::after {
+    right: 10px;
   }
 }
