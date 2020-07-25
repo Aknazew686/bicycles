@@ -29,6 +29,10 @@
   opacity: 0.7;
 }
 
+.header-list__link:hover {
+  color: #0ad9c6;
+}
+
 @media (max-width: $desktop-width) {
   .header-list {
     display: block;
