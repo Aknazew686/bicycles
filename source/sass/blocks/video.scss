@@ -41,6 +41,11 @@
   background-position: 0 0;
 }
 
+.video__link:hover::after,
+.video__link:focus::after {
+  background-image: url(../img/play-red.svg);
+}
+
 @media (max-width: $desktop-width) {
   .video {
     padding-top: 70px;
@@ -61,6 +66,11 @@
     height: 90px;
     background-image: url(../img/play-tablet.svg);
   }
+
+  .video__link:hover::after,
+  .video__link:focus::after {
+  background-image: url(../img/play-tablet-red.svg);
+}
 }
 
 @media (max-width: $tablet-width) {
@@ -83,4 +93,9 @@
     height: 65px;
     background-image: url(../img/play.svg);
   }
+
+  .video__link:hover::after,
+  .video__link:focus::after {
+  background-image: url(../img/play-red.svg);
+}
 }

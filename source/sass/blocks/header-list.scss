@@ -29,7 +29,8 @@
   opacity: 0.7;
 }
 
-.header-list__link:hover {
+.header-list__link:hover,
+.header-list__link:focus {
   color: #0ad9c6;
 }
 
