@@ -25,6 +25,10 @@
   cursor: pointer;
 }
 
+.selection__button:hover {
+  background-color: tomato;
+}
+
 .selection {
   margin-top: -498px;
   margin-left: calc(50% + 113px);

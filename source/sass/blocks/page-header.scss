@@ -22,6 +22,10 @@
   top: 297px;
 }
 
+.page-header__wrapper--no-js {
+  position: static;
+}
+
 @media (max-width: $desktop-width) {
   .page-header__logo-wrapper {
     display: flex;

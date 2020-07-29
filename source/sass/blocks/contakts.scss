@@ -33,6 +33,7 @@
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   width: 550px;
   justify-content: space-between;
   margin-left: 328px;
@@ -44,6 +45,20 @@
   line-height: 22px;
   color: rgba(0, 0, 0, 0.5);
   letter-spacing: 0.02em;
+}
+
+.contacts__link:hover,
+.contacts__link:focus {
+  color: tomato;
+}
+
+.contacts__item {
+  margin-right: 88px;
+  padding-bottom: 10px;
+}
+
+.contacts__item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .contacts__item--mail {

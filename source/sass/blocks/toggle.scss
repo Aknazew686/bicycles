@@ -23,8 +23,10 @@
     background-color: #0AD9C6;
   }
 
-  .toggle--opened {
+  .toggle--opened,
+  .toggle--no-js {
     background-image: url("../img/menu-cross.svg");
+    background-color: #ffffff;
   }
 
 }

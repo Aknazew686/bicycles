@@ -53,6 +53,13 @@
   background-position: 0 0;
 }
 
+@media (max-width: 1439px) {
+  .photo__heading {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 @media (max-width: $desktop-width) {
   .photo--mountain::after {
     display: none;
@@ -72,6 +79,7 @@
 
   .photo__heading {
     margin-left: 31px;
+    text-align: left;
   }
 
   .photo__heading--road {
